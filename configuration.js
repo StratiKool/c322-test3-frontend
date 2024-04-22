@@ -52,9 +52,10 @@ async function updateTheNavigationBar() {
 
 async function signup() {
     let email = document.getElementById("email").value;
-    let username = document.getElementById("username").value;
-    let password = document.getElementById("password").value;
+    let username = document.getElementById("usernamey").value;
+    let password = document.getElementById("passy").value;
     let customer = {email:email, username: username, password: password}
+    console.log(customer);
     let request = {
         method: "POST",
         headers: {
@@ -84,7 +85,7 @@ async function signup() {
 async function login() {    
     let username = document.getElementById("username").value;
     let password = document.getElementById("password").value;
-    let customer = {username: username, password: password}
+    let customer = {username: username, password: password};
     let request = {
         method: "POST",
         headers: {
